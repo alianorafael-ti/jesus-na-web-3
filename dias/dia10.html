@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Dia 10 | Renascendo em 40 Dias</title>
+
+  <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+  <div id="header"></div>
+
+  <main class="dia-page">
+
+    <section class="dia-container">
+
+      <span class="dia-numero">
+        Dia 10
+      </span>
+
+      <h1>
+        Fazendo Tudo Para Deus 
+      </h1>
+
+      <div class="versiculo">
+
+        <h2>Versículo</h2>
+
+        <p>
+          “E, tudo quanto fizerdes, fazei-o de todo o coração, como
+ao Senhor e não aos homens”.
+        </p>
+
+        <span>Colossenses 3:23</span>
+
+      </div>
+
+      <div class="reflexao">
+
+        <h2>Reflexão</h2>
+
+        <p>
+          A transformação que Deus deseja em nós
+não começa apenas nas atitudes visíveis, mas no
+coração. Quando fazemos algo apenas para agradar
+as pessoas, nosso esforço se torna limitado e instável.
+Mas quando entendemos que tudo o que fazemos é
+para o Senhor, até as tarefas mais simples ganham
+propósito eterno.
+        </p>
+
+      </div>
+
+      <div class="pratica">
+
+        <h2>Prática</h2>
+
+        <p>
+          Escolha uma tarefa simples do seu dia
+(trabalho, limpeza, ajudar alguém) e faça com
+dedicação e coração sincero, como se estivesse
+fazendo diretamente para Deus — mesmo que
+ninguém veja.
+        </p>
+
+      </div>
+
+      <div class="oracao">
+
+        <h2>Oração</h2>
+
+        <p>
+          Senhor, me ajuda a fazer tudo hoje com um
+coração sincero, como para Ti. Alinha minhas
+intenções e transforma meu interior, para que minhas
+atitudes Te honrem. Amém.
+        </p>
+
+      </div>
+
+      <div class="navegacao-dia">
+
+        <a href="../jornada.html"
+           class="botao-secundario">
+
+          Voltar Jornada
+
+        </a>
+
+        <a href="dia11.html"
+           class="botao-principal">
+
+          Próximo Dia →
+
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+
+    fetch("../header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+
+    fetch("../footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+
+  </script>
+
+</body>
+
+</html>

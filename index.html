@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesus na Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Header será carregado aqui pelo JavaScript -->
+    <div id="header"></div>
+
+    <section class="hero">
+        <div class="capa">
+            <img src="imagens/background.png" alt="Renascendo em 40 dias">
+        </div>
+        <div class="conteudo">
+            <h1>Renascendo em 40 dias</h1>
+            <p>
+                Depois da dor, da culpa e do vazio,<br>
+                Deus ainda pode escrever uma nova história.<br>
+                Descubra uma jornada de restauração espiritual
+                através do e-book Renascendo em 40 dias.
+            </p>
+            <div class="botoes">
+                <a href="#">Baixar E-book</a>
+                <a href="jornada.html">Começar Jornada</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="sobre">
+        <h2>Sobre o Livro</h2>
+        <p>
+            “Renascendo em 40 dias” nasceu de uma caminhada real
+            de dor, restauração e reencontro com Deus.<br><br>
+            Este e-book foi escrito para pessoas que precisam
+            de esperança, libertação e um novo começo.<br><br>
+            Durante 40 dias, você será conduzido por reflexões,
+            versículos e mensagens que apontam para a restauração
+            em Cristo.
+        </p>
+    </section>
+
+    <!-- Carrega o Header -->
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+            .catch(error => console.error('Erro ao carregar header:', error));
+    </script>
+    <div id="footer"></div>
+
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+</body>
+</html>

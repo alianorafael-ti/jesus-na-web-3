@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Dia 16 | Renascendo em 40 Dias</title>
+
+  <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+  <div id="header"></div>
+
+  <main class="dia-page">
+
+    <section class="dia-container">
+
+      <span class="dia-numero">
+        Dia 16
+      </span>
+
+      <h1>
+        Intercedendo Pelos Outros
+      </h1>
+
+      <div class="versiculo">
+
+        <h2>Versículo</h2>
+
+        <p>
+          “Admoesto-te, pois, antes de tudo, que se façam
+deprecações, orações, intercessões e ações de
+graças por todos os homens.”
+        </p>
+
+        <span>1Timóteo 2.1</span>
+
+      </div>
+
+      <div class="reflexao">
+
+        <h2>Reflexão</h2>
+
+        <p>
+          Deus nos chama a olhar além de nós
+mesmos e interceder por todos. Orar pelos
+outros é um ato de amor e responsabilidade
+espiritual.
+        </p>
+
+      </div>
+
+      <div class="pratica">
+
+        <h2>Prática</h2>
+
+        <p>
+          Separe um momento e ore por pelo
+menos 3 pessoas — alguém próximo, alguém
+em dificuldade e alguém que você nem conhece
+tão bem. Escreva seus nomes em um um
+pedaço de papel e os apresente a Deus em
+oração.
+        </p>
+
+      </div>
+
+      <div class="oracao">
+
+        <h2>Oração</h2>
+
+        <p>
+          Senhor, ensina-me a interceder pelos
+outros com amor. Coloco diante de Ti as vidas
+ao meu redor e peço que o Senhor opere com
+graça e poder. Amém.
+        </p>
+
+      </div>
+
+      <div class="navegacao-dia">
+
+        <a href="../jornada.html"
+           class="botao-secundario">
+
+          Voltar Jornada
+
+        </a>
+
+        <a href="dia17.html"
+           class="botao-principal">
+
+          Próximo Dia →
+
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+
+    fetch("../header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+
+    fetch("../footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+
+  </script>
+
+</body>
+
+</html>

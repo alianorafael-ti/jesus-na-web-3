@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Dia 26 | Renascendo em 40 Dias</title>
+
+  <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+  <div id="header"></div>
+
+  <main class="dia-page">
+
+    <section class="dia-container">
+
+      <span class="dia-numero">
+        Dia 26
+      </span>
+
+      <h1>
+        Esperança que Renova
+      </h1>
+
+      <div class="versiculo">
+
+        <h2>Versículo</h2>
+
+        <p>
+          "Mas os que esperam no Senhor renovarão as suas
+forças e subirão com asas como águias; correrão e
+não se cansarão; caminharão e não se fatigarão."
+        </p>
+
+        <span>Isaías 40:31</span>
+
+      </div>
+
+      <div class="reflexao">
+
+        <h2>Reflexão</h2>
+
+        <p>
+          Esperar em Deus não é ficar parado,
+é confiar. Quando colocamos nossa esperança
+nEle, recebemos força nova para continuar,
+mesmo cansados.
+        </p>
+
+      </div>
+
+      <div class="pratica">
+
+        <h2>Prática</h2>
+
+        <p>
+          O tempo todo somos bombardeados
+por situações externas e internas que nos
+cansam e desanimam, a partir de agora quando
+isso acontecer pare por um momento e
+entregue isso a Deus, confiando que Ele
+renovará suas forças.
+        </p>
+
+      </div>
+
+      <div class="oracao">
+
+        <h2>Oração</h2>
+
+        <p>
+          Senhor, renova minhas forças hoje.
+Ensina-me a esperar em Ti com fé, confiando
+que o Senhor me sustentará em todo tempo.
+Amém.
+        </p>
+
+      </div>
+
+      <div class="navegacao-dia">
+
+        <a href="../jornada.html"
+           class="botao-secundario">
+
+          Voltar Jornada
+
+        </a>
+
+        <a href="dia27.html"
+           class="botao-principal">
+
+          Próximo Dia →
+
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+
+    fetch("../header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+
+    fetch("../footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+
+  </script>
+
+</body>
+
+</html>

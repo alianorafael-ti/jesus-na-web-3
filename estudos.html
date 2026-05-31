@@ -1,0 +1,142 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Estudos Bíblicos | Jesus na Web</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div id="header"></div>
+
+  <main class="estudos-page">
+
+    <section class="hero-estudos">
+
+      <span class="subtitulo">
+        Crescimento Espiritual
+      </span>
+
+      <h1>
+        Estudos Bíblicos
+      </h1>
+
+      <p>
+        Aprofunde seu conhecimento da Palavra de Deus
+        através de estudos organizados por temas.
+      </p>
+
+    </section>
+
+   
+<section class="secao-estudos">
+
+  <h2>Mensagens e Estudos</h2>
+
+  <div class="estudos-grid">
+
+    <a href="#" class="estudo-card">
+      <h3>Série Compositores da Harpa Cristã</h3>
+      <p>Biografias e legados dos compositores da Harpa Cristã.</p>
+    </a>
+
+    <a href="#" class="estudo-card">
+      <h3>História da Igreja</h3>
+      <p>A trajetória do cristianismo através dos séculos.</p>
+    </a>
+
+    <a href="#" class="estudo-card">
+      <h3>Meditações</h3>
+      <p>Reflexões para fortalecer sua caminhada com Deus.</p>
+    </a>
+
+    <a href="#" class="estudo-card">
+      <h3>Estudos Bíblicos</h3>
+      <p>Aprendizado organizado das Escrituras Sagradas.</p>
+    </a>
+
+    <a href="#" class="estudo-card">
+      <h3>Apologética</h3>
+      <p>Defesa da fé cristã baseada na Bíblia.</p>
+    </a>
+
+    <a href="#" class="estudo-card">
+      <h3>Espírito Santo</h3>
+      <p>Conheça mais sobre a pessoa e obra do Espírito Santo.</p>
+    </a>
+
+    <a href="#" class="estudo-card">
+      <h3>Missões</h3>
+      <p>O chamado da Igreja para alcançar as nações.</p>
+    </a>
+
+  </div>
+
+</section>
+
+<section class="vida-em-foco">
+
+  <h2>Vida em Foco</h2>
+
+  <p>
+    Conteúdos voltados à transformação de vidas,
+    testemunhos, recomendações e recursos para o dia a dia cristão.
+  </p>
+
+  <div class="estudos-grid">
+
+    <a href="#" class="estudo-card">
+      <h3>Liberto por Cristo</h3>
+      <p>Histórias de restauração e transformação pelo Evangelho.</p>
+    </a>
+
+    <a href="#" class="estudo-card">
+      <h3>Livros Cristãos</h3>
+      <p>Indicações e análises de obras que edificam a fé.</p>
+    </a>
+
+    <a href="#" class="estudo-card">
+      <h3>Filmes Cristãos</h3>
+      <p>Filmes inspiradores com mensagens cristãs relevantes.</p>
+    </a>
+
+  </div>
+
+</section>
+
+
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+
+  </script>
+
+</body>
+
+</html>
+```

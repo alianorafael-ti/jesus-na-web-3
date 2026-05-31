@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Dia 32 | Renascendo em 40 Dias</title>
+
+  <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+  <div id="header"></div>
+
+  <main class="dia-page">
+
+    <section class="dia-container">
+
+      <span class="dia-numero">
+        Dia 32
+      </span>
+
+      <h1>
+        Amor Fraternal
+      </h1>
+
+      <div class="versiculo">
+
+        <h2>Versículo</h2>
+
+        <p>
+          "Amai-vos cordialmente uns aos outros com amor
+fraternal, preferindo-vos em honra uns aos
+outros."
+        </p>
+
+        <span>Romanos 12:10</span>
+
+      </div>
+
+      <div class="reflexao">
+
+        <h2>Reflexão</h2>
+
+        <p>
+          O amor verdadeiro se expressa em
+atitudes de cuidado, respeito e valorização do
+outro acima de si mesmo.
+        </p>
+
+      </div>
+
+      <div class="pratica">
+
+        <h2>Prática</h2>
+
+        <p>
+          Coloque alguém em primeiro lugar
+hoje — demonstre honra com uma atitude de
+cuidado ou gentileza.
+        </p>
+
+      </div>
+
+      <div class="oracao">
+
+        <h2>Oração</h2>
+
+        <p>
+          Senhor, ensina-me a amar de forma
+verdadeira. Dá-me um coração humilde para
+honrar e valorizar as pessoas ao meu redor.
+Amém.
+        </p>
+
+      </div>
+
+      <div class="navegacao-dia">
+
+        <a href="../jornada.html"
+           class="botao-secundario">
+
+          Voltar Jornada
+
+        </a>
+
+        <a href="dia33.html"
+           class="botao-principal">
+
+          Próximo Dia →
+
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+
+    fetch("../header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+
+    fetch("../footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+
+  </script>
+
+</body>
+
+</html>

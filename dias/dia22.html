@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Dia 22 | Renascendo em 40 Dias</title>
+
+  <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+  <div id="header"></div>
+
+  <main class="dia-page">
+
+    <section class="dia-container">
+
+      <span class="dia-numero">
+        Dia 22
+      </span>
+
+      <h1>
+       Fidelidade nas Pequenas Coisas
+      </h1>
+
+      <div class="versiculo">
+
+        <h2>Versículo</h2>
+
+        <p>
+          "Quem é fiel no mínimo também é fiel no muito;
+quem é injusto no mínimo também é injusto no
+muito."
+        </p>
+
+        <span>Lucas 16:10</span>
+
+      </div>
+
+      <div class="reflexao">
+
+        <h2>Reflexão</h2>
+
+        <p>
+         A fidelidade começa nas pequenas
+coisas. Deus observa o coração e a constância,
+não apenas grandes feitos.
+        </p>
+
+      </div>
+
+      <div class="pratica">
+
+        <h2>Prática</h2>
+
+        <p>
+          A vida é feita de pequenas coisas,
+aplique seu coração em tudo que fizer, desde o
+esticar o lençol de sua cama até a tarefa
+designada em seu trabalho diário. Dê o seu
+melhor como que se estivesse fazendo para o
+Senhor.
+        </p>
+
+      </div>
+
+      <div class="oracao">
+
+        <h2>Oração</h2>
+
+        <p>
+          Senhor, ensina-me a ser fiel nas
+pequenas coisas. Forma em mim um caráter
+íntegro que Te agrade em tudo. Amém.
+        </p>
+
+      </div>
+
+      <div class="navegacao-dia">
+
+        <a href="../jornada.html"
+           class="botao-secundario">
+
+          Voltar Jornada
+
+        </a>
+
+        <a href="dia23.html"
+           class="botao-principal">
+
+          Próximo Dia →
+
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+
+    fetch("../header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+
+    fetch("../footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+
+  </script>
+
+</body>
+
+</html>

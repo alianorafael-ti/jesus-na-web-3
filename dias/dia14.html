@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Dia 14 | Renascendo em 40 Dias</title>
+
+  <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+  <div id="header"></div>
+
+  <main class="dia-page">
+
+    <section class="dia-container">
+
+      <span class="dia-numero">
+        Dia 14
+      </span>
+
+      <h1>
+        Descanço para a Alma
+      </h1>
+
+      <div class="versiculo">
+
+        <h2>Versículo</h2>
+
+        <p>
+          “Vinde a mim, todos os que estais cansados e
+oprimidos, e eu vos aliviarei.”
+        </p>
+
+        <span>Mateus 11:28</span>
+
+      </div>
+
+      <div class="reflexao">
+
+        <h2>Reflexão</h2>
+
+        <p>
+          Jesus nos convida a entregar o peso que
+carregamos. Nele encontramos descanso verdadeiro
+para a alma.
+        </p>
+
+      </div>
+
+      <div class="pratica">
+
+        <h2>Prática</h2>
+
+        <p>
+          Separe alguns minutos em silêncio e
+entregue a Deus tudo o que está te cansando, escreva
+em um pedaço de papel tudo o que vier em sua mente
+, procure no fundo do seu coração aquilo que estiver
+mais escondido e você não ousa nem mesmo nomear,
+é isso que Jesus quer que você entregue a Ele.
+        </p>
+
+      </div>
+
+      <div class="oracao">
+
+        <h2>Oração</h2>
+
+        <p>
+          Senhor, tem muita coisa trancada em meu
+coração que eu não consigo dividir com ninguém,mas
+eu estou cansado de carregar isso sozinho eu preciso
+de Ti. Entrego minhas cargas em Tuas mãos e recebo o
+Teu descanso. Amém.
+        </p>
+
+      </div>
+
+      <div class="navegacao-dia">
+
+        <a href="../jornada.html"
+           class="botao-secundario">
+
+          Voltar Jornada
+
+        </a>
+
+        <a href="dia15.html"
+           class="botao-principal">
+
+          Próximo Dia →
+
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+
+    fetch("../header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+
+    fetch("../footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+
+  </script>
+
+</body>
+
+</html>
