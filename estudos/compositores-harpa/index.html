@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Compositores da Harpa Cristã | Jesus na Web</title>
+
+    <link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+    <main class="categoria-page">
+
+        <section class="hero-categoria">
+
+            <span class="subtitulo">
+                Série Especial
+            </span>
+
+            <h1>
+                Compositores da Harpa Cristã
+            </h1>
+
+            <p>
+                Conheça a história, a fé e o legado dos homens e mulheres
+                que contribuíram para os hinos que edificam a Igreja até hoje.
+            </p>
+
+        </section>
+
+        <section class="introducao-categoria">
+
+            <h2>INTRODUÇÃO</h2>
+
+            <h3>A História por Trás dos Hinos que Cantamos</h3>
+
+            <p>
+                Ao longo dos cultos cristãos, milhões de vozes se unem para cantar hinos que atravessaram gerações. Suas melodias são familiares, suas letras estão gravadas na memória da Igreja, mas, paradoxalmente, suas origens são pouco conhecidas. Quem escreveu esses hinos? Em que contexto nasceram? Que lutas, dores, avivamentos e esperanças deram forma às palavras que ainda hoje proclamamos?
+            </p>
+
+            <p>
+                Esta série nasce com o propósito de despertar o interesse pela história dos hinos cristãos, especialmente daqueles que compõem a Harpa Cristã. Não se trata apenas de música, mas de fé cantada, de teologia expressa em versos, de testemunhos que ecoam através do tempo. Cada hino carrega consigo a marca de seu autor e do mundo em que ele viveu.
+            </p>
+
+            <h3>O Legado da Reforma</h3>
+
+            <p>
+                Antes da Reforma Protestante, a música no culto cristão era, em grande parte, restrita ao clero e aos coros. O povo assistia, mas não participava. A fé era ouvida, não cantada pela congregação. Foi somente com a Reforma do século XVI que o canto congregacional passou a ocupar um lugar central, tornando-se um poderoso instrumento de ensino bíblico, adoração e proclamação do Evangelho.
+            </p>
+
+            <p>
+                Ao longo desta série, o leitor será conduzido por uma linha cronológica, dos compositores mais antigos aos mais contemporâneos, sempre situados em seu contexto histórico mundial e eclesiástico. O objetivo não é esgotar o assunto, mas instigar: provocar curiosidade, despertar reverência e incentivar um mergulho mais profundo na história da Igreja e da música cristã.
+            </p>
+
+            <p>
+                Este conteúdo, apresentado de forma introdutória no site, é uma preparação natural para um estudo mais amplo e aprofundado, que futuramente será reunido em formato de livro. Aqui, o convite é simples: olhar para os hinos que sempre cantamos com novos olhos, reconhecendo que eles são fruto da ação de Deus na história, por meio de vidas rendidas à Sua Palavra.
+            </p>
+
+        </section>
+
+        <section class="conteudos-grid">
+
+            <a href="martinho-lutero.html" class="conteudo-card">
+
+                <h3>Martinho Lutero</h3>
+
+                <p>
+                    Reformador, teólogo e compositor de hinos. Conheça o homem que devolveu o canto congregacional ao povo cristão e marcou a história da Igreja.
+                </p>
+
+            </a>
+
+        </section>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+
+        fetch("../../header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+
+        fetch("../../footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+    </script>
+
+</body>
+
+</html>

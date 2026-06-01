@@ -691,7 +691,7 @@ nav a:hover {
 
 }
 
-```css
+
 /* REDES SOCIAIS */
 
 .social-links {
@@ -740,8 +740,133 @@ nav a:hover {
     .social-btn {
         width: 100%;
     }
+}
+
+/* =================================
+   PÁGINAS DE CATEGORIA
+================================= */
+
+.categoria-page {
+    padding: 140px 10% 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero */
+
+.hero-categoria {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.hero-categoria .subtitulo {
+    display: block;
+    color: #d4af37;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero-categoria h1 {
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.hero-categoria p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: rgba(255,255,255,.85);
+}
+
+/* Introdução */
+
+.introducao-categoria {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(212,175,55,0.15);
+    border-radius: 20px;
+    padding: 50px;
+    margin-bottom: 60px;
+}
+
+.introducao-categoria h2 {
+    color: #d4af37;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.introducao-categoria h3 {
+    color: #d4af37;
+    margin: 40px 0 20px;
+    font-size: 1.6rem;
+}
+
+.introducao-categoria p {
+    line-height: 1.9;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Próximo estudo */
+
+.conteudos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.conteudo-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+
+    background: rgba(255,255,255,0.03);
+
+    border: 1px solid rgba(212,175,55,0.15);
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    transition: all .3s ease;
+}
+
+.conteudo-card:hover {
+    transform: translateY(-5px);
+    border-color: #d4af37;
+}
+
+.conteudo-card h3 {
+    color: #d4af37;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.conteudo-card p {
+    line-height: 1.8;
+}
+
+/* Responsivo */
+
+@media (max-width: 768px) {
+
+    .hero-categoria h1 {
+        font-size: 2.4rem;
+    }
+
+    .introducao-categoria {
+        padding: 30px;
+    }
 
 }
+
+
+
 
 
 
