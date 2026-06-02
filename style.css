@@ -865,6 +865,105 @@ nav a:hover {
 
 }
 
+/* ======================================
+   PRÓXIMO ESTUDO
+====================================== */
+
+.proximo-estudo {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #1a1a1a;
+    border-left: 5px solid #d4af37;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.proximo-estudo h2 {
+    color: #d4af37;
+    margin-bottom: 15px;
+}
+
+.proximo-estudo p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.btn-proximo {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #d4af37;
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.btn-proximo:hover {
+    transform: translateY(-2px);
+}
+/* ================================
+   PADRÃO DE TÍTULOS DOS ESTUDOS
+================================ */
+
+.categoria-page h2 {
+    color: #d4af37;
+}
+
+.categoria-page h3 {
+    color: #d4af37;
+}
+
+.categoria-page h2,
+.categoria-page h3 {
+    font-weight: 600;
+}
+
+/* ======================================
+   INTRODUÇÃO - ESTILO COMPLETO DO CARD
+====================================== */
+
+.introducao-categoria {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #1a1a1a;
+    border-left: 5px solid #d4af37;
+    border-radius: 8px;
+
+    /* 🔥 ESSENCIAL: animação igual aos outros cards */
+    transition: all 0.3s ease;
+}
+
+/* 🔥 EFEITO DE MOVIMENTO (hover igual padrão do site) */
+.introducao-categoria:hover {
+    transform: translateY(-5px);
+}
+
+/* 🔥 TÍTULOS DENTRO DO CARD */
+.introducao-categoria h2 {
+    color: #d4af37;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+/* 🔥 PARÁGRAFOS */
+.introducao-categoria p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* 🔥 BLOCKQUOTE */
+.introducao-categoria blockquote {
+    background: #111;
+    border-left: 4px solid #d4af37;
+    padding: 20px;
+    margin: 20px 0;
+    font-style: italic;
+    color: #f1f1f1;
+}
+
 
 
 
