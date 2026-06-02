@@ -964,6 +964,37 @@ nav a:hover {
     color: #f1f1f1;
 }
 
+/* ==========================
+   MEDITAÇÕES
+========================== */
+
+.meditacao-conteudo {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 40px;
+    background: rgba(20, 20, 20, 0.85);
+    border-left: 4px solid #d4af37;
+    border-radius: 12px;
+    line-height: 2;
+    font-size: 1.15rem;
+}
+
+.meditacao-conteudo p {
+    margin-bottom: 1.6rem;
+}
+
+.meditacao-conteudo blockquote {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border-left: 4px solid #d4af37;
+    background: rgba(212, 175, 55, 0.08);
+    font-style: italic;
+}
+
+.meditacao-conteudo blockquote p {
+    margin: 0;
+}
+
 
 
 
