@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livros que Edificam | Jesus na Web</title>
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+</head>
+
+<body>
+
+
+<div id="header"></div>
+
+<main class="categoria-page">
+
+    <section class="hero-categoria">
+        <h1>📚 Livros que Edificam</h1>
+        <p>
+            Obras inspiradoras que fortalecem a fé, ampliam o conhecimento bíblico
+            e incentivam o crescimento espiritual.
+        </p>
+    </section>
+
+    <section class="introducao-categoria">
+
+        <blockquote>
+            <p>
+                "Persiste em ler, exortar e ensinar."
+            </p>
+            <cite>1 Timóteo 4:13</cite>
+        </blockquote>
+
+        <p>
+            Ao longo da história, Deus tem usado homens e mulheres para registrar
+            ensinamentos, testemunhos e reflexões que auxiliam os cristãos em sua caminhada.
+            Nesta seção reunimos livros que podem enriquecer seu conhecimento das Escrituras,
+            fortalecer sua fé e inspirar uma vida mais próxima do Senhor.
+        </p>
+
+        <p>
+            A leitura de bons livros cristãos não substitui a Bíblia, mas pode servir
+            como uma ferramenta valiosa para aprofundar o entendimento da Palavra de Deus
+            e aprender com a experiência de servos fiéis que marcaram a história da Igreja.
+        </p>
+
+        <h2>📖 Livro em Destaque</h2>
+
+        <h3>O Peregrino — John Bunyan</h3>
+
+        <p>
+            Publicado pela primeira vez em 1678, "O Peregrino" é uma das obras cristãs
+            mais influentes de todos os tempos. Escrito por John Bunyan enquanto estava
+            preso por pregar o Evangelho, o livro apresenta a jornada de um homem chamado
+            Cristão, que deixa a Cidade da Destruição em busca da Cidade Celestial.
+        </p>
+
+        <p>
+            Ao longo de sua caminhada, ele enfrenta desafios, tentações, perseguições e
+            obstáculos que representam as lutas vividas por todo aquele que deseja seguir
+            a Cristo. Através de personagens simbólicos e lições profundas, a obra mostra
+            que a vida cristã é uma peregrinação marcada por fé, perseverança e dependência
+            de Deus.
+        </p>
+
+        <p>
+            Mais do que uma simples história, "O Peregrino" é um retrato da jornada espiritual
+            de cada cristão. Suas páginas nos desafiam a permanecer firmes diante das dificuldades
+            e a manter os olhos voltados para a eternidade.
+        </p>
+
+        <blockquote>
+            <p>
+                "Esforcem-se para entrar pela porta estreita, porque eu lhes digo que muitos
+                tentarão entrar e não conseguirão."
+            </p>
+            <cite>Lucas 13:24</cite>
+        </blockquote>
+
+        <h2>📖 Reflexão Cristã</h2>
+
+        <p>
+            A jornada de Cristão nos lembra que a fé não é um caminho livre de dificuldades.
+            Pelo contrário, seguir a Cristo exige perseverança, confiança e dependência constante
+            da graça de Deus.
+        </p>
+
+        <p>
+            Em um mundo repleto de distrações e caminhos aparentemente mais fáceis, o livro nos
+            convida a manter os olhos fixos no Senhor, lembrando que nossa verdadeira pátria não
+            está neste mundo, mas na presença eterna de Deus.
+        </p>
+
+        <p>
+            Assim como o personagem principal enfrentou vales escuros, montanhas difíceis e
+            momentos de desânimo, cada cristão também encontrará desafios ao longo da caminhada.
+            Porém, Deus permanece fiel para conduzir Seus filhos até o destino final.
+        </p>
+
+        <p>
+            "O Peregrino" continua sendo uma leitura indispensável para todos aqueles que desejam
+            compreender melhor a caminhada cristã e crescer em maturidade espiritual.
+        </p>
+
+    </section>
+
+    <section class="proximo-estudo">
+
+        <h2>Próximo Livro</h2>
+
+        <a href="#" class="conteudo-card">
+            <h3>📚 Em Breve</h3>
+            <p>
+                Novas recomendações de livros que fortalecem a fé,
+                inspiram a vida cristã e aprofundam o conhecimento bíblico.
+            </p>
+        </a>
+
+    </section>
+
+</main>
+
+<div id="footer"></div>
+
+<script>
+    fetch("/header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header").innerHTML = data;
+        });
+
+    fetch("/footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+        });
+</script>
+
+
+</body>
+
+</html>

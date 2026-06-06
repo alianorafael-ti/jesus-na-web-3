@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes que Edificam | Jesus na Web</title>
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+</head>
+
+<body>
+
+
+<div id="header"></div>
+
+<main class="categoria-page">
+
+    <section class="hero-categoria">
+        <h1>🎬 Filmes que Edificam</h1>
+        <p>Histórias inspiradoras que fortalecem a fé e promovem reflexão cristã.</p>
+    </section>
+
+    <section class="introducao-categoria">
+
+        <blockquote>
+            <p>
+                "Tudo o que é verdadeiro, tudo o que é honesto, tudo o que é justo,
+                tudo o que é puro, tudo o que é amável, tudo o que é de boa fama,
+                se há alguma virtude, e se há algum louvor, nisso pensai."
+            </p>
+            <cite>Filipenses 4:8</cite>
+        </blockquote>
+
+        <p>
+            O cinema possui o poder de contar histórias que despertam emoções,
+            promovem reflexão e nos fazem enxergar a vida sob novas perspectivas.
+            Nesta seção reunimos filmes que apresentam valores compatíveis com os
+            princípios cristãos e que podem contribuir para o crescimento espiritual,
+            fortalecimento da fé e compreensão de importantes desafios da vida.
+        </p>
+
+        <h2>🎬 Filme em Destaque</h2>
+
+        <h3>O Retorno de Ben (Ben Is Back)</h3>
+
+        <p>
+            Na véspera de Natal, uma mãe recebe uma visita inesperada:
+            seu filho Ben retorna para casa após um período em recuperação da dependência química.
+            O reencontro desperta alegria, mas também medo, dúvidas e lembranças de feridas ainda abertas.
+        </p>
+
+        <p>
+            Ao longo de um único dia, o filme revela a dura realidade enfrentada por muitas famílias
+            que convivem com os efeitos da dependência. Mais do que uma história sobre vícios,
+            "O Retorno de Ben" retrata o amor incondicional de uma mãe, a luta pela restauração
+            e o desafio de permanecer firme diante das tentações e das consequências do passado.
+        </p>
+
+        <p>
+            Com atuações marcantes e uma narrativa emocionante, o filme nos faz refletir sobre perdão,
+            responsabilidade, esperança e a importância de nunca desistir daqueles que precisam de uma nova oportunidade.
+        </p>
+
+        <p>
+            Uma obra sensível e impactante que nos lembra que a restauração é um caminho difícil,
+            mas que o amor, a perseverança e a graça podem iluminar até os momentos mais sombrios.
+        </p>
+
+        <h2>🎥 Assista ao Trailer</h2>
+
+        <p>
+            Confira o trailer e conheça um pouco desta emocionante história de amor,
+            restauração e esperança.
+        </p>
+
+        <div class="video-container">
+            <iframe
+                src="https://www.youtube.com/embed/4kom3reM_gI"
+                title="Trailer - O Retorno de Ben"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <p style="text-align:center;">
+            <a href="https://www.youtube.com/watch?v=4kom3reM_gI"
+                target="_blank"
+                rel="noopener noreferrer">
+                ▶️ Assistir no YouTube
+            </a>
+        </p>
+
+        <blockquote>
+            <p>
+                "Assim também vos digo que há alegria diante dos anjos de Deus
+                por um pecador que se arrepende."
+            </p>
+            <cite>Lucas 15:10</cite>
+        </blockquote>
+
+        <h2>📖 Reflexão Cristã</h2>
+
+        <p>
+            A história de Ben nos lembra que a restauração nem sempre acontece de forma instantânea.
+            Muitas vezes ela é construída dia após dia, através de escolhas, perseverança e do amor
+            daqueles que se recusam a desistir.
+        </p>
+
+        <p>
+            O Evangelho nos mostra que Deus continua buscando, recebendo e transformando vidas
+            que parecem sem esperança. Nenhuma história está além do alcance da graça de Cristo.
+        </p>
+
+        <p>
+            Assim como o pai da parábola do filho pródigo aguardava o retorno de seu filho,
+            Deus continua de braços abertos para aqueles que desejam recomeçar.
+        </p>
+
+        <p>
+            Que esta história nos lembre da importância da compaixão, do perdão e da perseverança
+            na caminhada cristã, especialmente quando lidamos com pessoas que enfrentam batalhas difíceis.
+        </p>
+
+    </section>
+
+    <section class="proximo-estudo">
+
+        <h2>Próximo Filme</h2>
+
+        <a href="#" class="conteudo-card">
+            <h3>🎞️ Em Breve</h3>
+            <p>
+                Novas recomendações de filmes que inspiram fé,
+                esperança e transformação de vidas.
+            </p>
+        </a>
+
+    </section>
+
+</main>
+
+<div id="footer"></div>
+
+<script>
+    fetch("/header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header").innerHTML = data;
+        });
+
+    fetch("/footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+        });
+</script>
+
+
+</body>
+
+</html>
+
