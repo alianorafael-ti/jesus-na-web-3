@@ -1,0 +1,202 @@
+```html id="tst1"
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testemunhos | Jesus na Web</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<main class="categoria-page">
+
+    <section class="hero-categoria">
+        <h1>✝️ Testemunhos</h1>
+        <p>
+            Histórias reais de vidas transformadas pelo poder de Deus.
+        </p>
+
+        <blockquote>
+            <p>
+                "Eles o venceram pelo sangue do Cordeiro e pela palavra do seu testemunho."
+            </p>
+            <cite>Apocalipse 12:11</cite>
+        </blockquote>
+    </section>
+
+    <section class="introducao-categoria">
+
+        <p>
+            Ao longo da história, Deus tem transformado vidas, restaurado famílias,
+            libertado pessoas e sustentado seus filhos em meio às maiores dificuldades.
+            Nesta página reunimos testemunhos que mostram o agir do Senhor em diferentes
+            épocas e contextos.
+        </p>
+
+        <hr>
+
+        <h2>❤️ Fé em Meio à Perseguição</h2>
+
+        <h3>Jenny — Síria</h3>
+
+        <p>
+            Em junho de 2025, um atentado suicida atingiu uma igreja cristã em Damasco,
+            na Síria. Naquele domingo, Jenny não estava no culto porque recebia uma amiga
+            em casa. Pouco depois, recebeu a notícia de que uma explosão havia ocorrido
+            na igreja frequentada por sua família.
+        </p>
+
+        <p>
+            Seu pai estava entre os feridos. Após horas de angústia e esperança, Jenny
+            recebeu a notícia de que ele havia falecido em consequência dos ferimentos.
+            Além dele, outros familiares e amigos perderam a vida naquele ataque.
+        </p>
+
+        <p>
+            Mesmo diante da dor, Jenny declarou sua confiança em Cristo e afirmou ter
+            certeza de que seu pai estava com Jesus. Em vez de buscar vingança, decidiu
+            dedicar seu tempo ajudando outras vítimas da violência e da perseguição.
+        </p>
+
+        <blockquote>
+            <p>
+                "Bem-aventurados os perseguidos por causa da justiça, porque deles é o reino dos céus."
+            </p>
+            <cite>Mateus 5:10</cite>
+        </blockquote>
+
+        <p>
+            O testemunho de Jenny nos lembra que a fé cristã permanece firme mesmo quando
+            tudo parece desmoronar ao nosso redor.
+        </p>
+
+        <hr>
+
+        <h2>⚡ De Perseguidor a Apóstolo</h2>
+
+        <h3>Saulo de Tarso</h3>
+
+        <p>
+            Saulo era conhecido por perseguir os seguidores de Jesus. Convencido de que
+            estava defendendo a religião de seus antepassados, ele participou da prisão
+            de cristãos e aprovou a morte de muitos deles.
+        </p>
+
+        <p>
+            Enquanto seguia para Damasco com autorização para prender discípulos de Cristo,
+            teve um encontro que mudou sua vida para sempre. Uma luz vinda do céu o cercou
+            e ele ouviu a voz de Jesus:
+        </p>
+
+        <blockquote>
+            <p>
+                "Saulo, Saulo, por que me persegues?"
+            </p>
+            <cite>Atos 9:4</cite>
+        </blockquote>
+
+        <p>
+            Aquele perseguidor se tornou um dos maiores pregadores do Evangelho. Conhecido
+            posteriormente como Paulo, dedicou sua vida a anunciar Cristo e escreveu grande
+            parte do Novo Testamento.
+        </p>
+
+        <p>
+            Seu testemunho prova que ninguém está longe demais da graça de Deus.
+        </p>
+
+        <hr>
+
+        <h2>🔥 Das Gangues para Cristo</h2>
+
+        <h3>Nicky Cruz</h3>
+
+        <p>
+            Nicky Cruz cresceu em um ambiente marcado pela violência e pelos abusos.
+            Ainda jovem, mudou-se para Nova York e acabou ingressando em uma das gangues
+            mais perigosas da cidade.
+        </p>
+
+        <p>
+            Tornou-se líder dos "Mau Maus", um grupo temido por sua violência. Muitos
+            acreditavam que sua vida estava destinada ao crime e à destruição.
+        </p>
+
+        <p>
+            Tudo começou a mudar quando ele conheceu o evangelista David Wilkerson.
+            Em vez de condená-lo, Wilkerson falou sobre o amor de Deus e afirmou que
+            Jesus o amava.
+        </p>
+
+        <p>
+            Inicialmente Nicky rejeitou a mensagem, mas o Espírito Santo continuou
+            trabalhando em seu coração. Finalmente, ele entregou sua vida a Cristo e
+            experimentou uma transformação radical.
+        </p>
+
+        <blockquote>
+            <p>
+                "Assim que, se alguém está em Cristo, nova criatura é; as coisas velhas já passaram; eis que tudo se fez novo."
+            </p>
+            <cite>2 Coríntios 5:17</cite>
+        </blockquote>
+
+        <p>
+            Aquele que antes espalhava medo passou a anunciar esperança, tornando-se
+            evangelista e testemunhando o poder transformador de Jesus Cristo.
+        </p>
+
+    </section>
+
+    <!-- FORMULÁRIO ADICIONADO -->
+    <section class="proximo-estudo">
+
+        <h2>✍️ Compartilhe seu Testemunho</h2>
+
+        <p>
+            Deus continua realizando milagres e transformando vidas. Compartilhe o que Ele fez na sua história.
+        </p>
+
+        <form action="https://formspree.io/f/xbdedaol" method="POST">
+
+            <input type="text" name="nome" placeholder="Seu nome (opcional)">
+            <input type="text" name="cidade" placeholder="Sua cidade (opcional)">
+
+            <textarea name="testemunho" placeholder="Escreva seu testemunho" required></textarea>
+
+            <button type="submit">Enviar Testemunho</button>
+
+        </form>
+
+    </section>
+
+</main>
+
+<div id="footer"></div>
+
+<script>
+    fetch("/header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header").innerHTML = data;
+        });
+
+    fetch("/footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+        });
+</script>
+
+</body>
+
+</html>
+```

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Oração | Jesus na Web</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<main class="oracao-page">
+
+  <!-- HERO -->
+  <section class="hero-quem-somos">
+
+    <span class="subtitulo">
+      Fale com Deus
+    </span>
+
+    <h1>
+      🙏 Oração
+    </h1>
+
+    <p>
+      A oração é o lugar onde o coração encontra descanso na presença de Deus.
+    </p>
+
+  </section>
+
+  <!-- INTRODUÇÃO -->
+  <section class="quem-card">
+
+    <h2>O que é a Oração?</h2>
+
+    <p>
+      A oração é o diálogo entre o homem e Deus. Não é apenas um ritual, mas um relacionamento vivo com o Pai Celestial, por meio de Jesus Cristo.
+    </p>
+
+    <p>
+      Em qualquer momento da vida — alegria, dor, dúvida ou esperança — Deus ouve aqueles que O buscam com sinceridade.
+    </p>
+
+    <blockquote>
+      “Clama a mim, e responder-te-ei, e anunciar-te-ei coisas grandes e firmes que não sabes.”
+      (Jeremias 33:3)
+    </blockquote>
+
+  </section>
+
+  <!-- ENSINO SIMPLES -->
+  <section class="quem-card">
+
+    <h2>Como Orar?</h2>
+
+    <ul>
+      <li><strong>Adoração:</strong> Reconheça quem Deus é.</li>
+      <li><strong>Gratidão:</strong> Agradeça pelas bênçãos.</li>
+      <li><strong>Confissão:</strong> Apresente seus erros e peça perdão.</li>
+      <li><strong>Súplica:</strong> Apresente seus pedidos a Deus.</li>
+    </ul>
+
+  </section>
+
+  <!-- ORAÇÃO MODELO -->
+  <section class="quem-card">
+
+    <h2>Oração Modelo</h2>
+
+    <p>
+      Senhor Deus, obrigado por mais um dia de vida.  
+      Entrego diante de Ti minhas preocupações, minhas lutas e minhas esperanças.
+    </p>
+
+    <p>
+      Fortalece minha fé, guia meus passos e me ensina a confiar em Ti em todas as circunstâncias.
+    </p>
+
+    <p>
+      Em nome de Jesus, amém.
+    </p>
+
+  </section>
+
+  <!-- FORMULÁRIO -->
+  <section class="quem-card">
+
+    <h2>🤲 Envie seu Pedido de Oração</h2>
+
+    <p>
+      Compartilhe seu pedido. Ele será recebido com respeito e pode ser lembrado em oração.
+    </p>
+
+    <form action="https://formspree.io/f/mgobolaj" method="POST">
+
+      <input type="text" name="nome" placeholder="Seu nome (opcional)">
+      <input type="email" name="email" placeholder="Seu e-mail (opcional)">
+
+      <textarea name="pedido" placeholder="Escreva seu pedido de oração" required></textarea>
+
+      <button type="submit">Enviar Pedido</button>
+
+    </form>
+
+  </section>
+
+  <!-- ENCERRAMENTO -->
+  <section class="quem-card">
+
+    <h2>Uma Palavra Final</h2>
+
+    <p>
+      Não importa a situação que você esteja vivendo: Deus continua ouvindo a oração dos que O buscam.
+    </p>
+
+    <p>
+      Persevere, confie e descanse no Senhor.
+    </p>
+
+  </section>
+
+</main>
+
+<div id="footer"></div>
+
+<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    })
+    .catch(error => console.error('Erro ao carregar header:', error));
+</script>
+
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+
+</body>
+</html>
