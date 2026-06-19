@@ -248,22 +248,7 @@
     </main>
 
     <!-- Carrega o Header -->
-    <script>
-        fetch('./header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-            })
-            .catch(error => console.error('Erro ao carregar header:', error));
-    </script>
-    <div id="footer"></div>
-
-<script>
-  fetch("./footer.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("footer").innerHTML = data;
-    });
-</script>
+   <div id="footer"></div>
+   <script src="script.js"></script>
 </body>
 </html>

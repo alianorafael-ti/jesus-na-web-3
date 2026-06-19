@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fanny Crosby | Compositores da Harpa Cristã</title>
 
-    <link rel="stylesheet" ../../style.css>
+    <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
 
@@ -294,7 +294,7 @@
 
             <h2>Próximo Estudo</h2>
 
-            <a href="philip-bliss.html" class="conteudo-card">
+            <a href="#" class="conteudo-card">
                 <h3>Philip Bliss</h3>
                 <p>O Evangelista da Música Sacra</p>
             </a>
@@ -305,20 +305,7 @@
 
     <div id="footer"></div>
 
-    <script>
-        fetch("header.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("header").innerHTML = data;
-            });
-
-        fetch("footer.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("footer").innerHTML = data;
-            });
-    </script>
-
+    <script src="../../script.js"></script>
 </body>
 </html>
-```
+

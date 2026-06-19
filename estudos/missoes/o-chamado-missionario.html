@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O Chamado Missionário | Jesus na Web</title>
 
-    <link rel="stylesheet" ../../style.css>
+    <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
 
@@ -351,7 +351,7 @@
 
             <h2>Próximo Estudo</h2>
 
-            <a href="a-grande-comissao.html" class="conteudo-card">
+            <a href="#" class="conteudo-card">
                 <h3>A Grande Comissão</h3>
                 <p>
                     Entenda a ordem deixada por Jesus à Sua Igreja e descubra por que ela continua sendo a missão mais importante do mundo.
@@ -364,19 +364,7 @@
 
     <div id="footer"></div>
 
-    <script>
-        fetch("header.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("header").innerHTML = data;
-            });
-
-        fetch("footer.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("footer").innerHTML = data;
-            });
-    </script>
+   <script src="../../script.js"></script>
 
 </body>
 </html>
