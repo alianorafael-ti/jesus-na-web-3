@@ -34,6 +34,12 @@ header {
     font-size: 1.8rem;
     font-weight: bold;
     color: #c59d5f;
+    flex-shrink: 0; /* Impede a logo de esmagar no celular */
+}
+
+nav {
+    display: flex;
+    align-items: center;
 }
 
 nav a {
@@ -42,6 +48,7 @@ nav a {
     margin-left: 25px;
     font-weight: 500;
     transition: 0.3s;
+    white-space: nowrap; /* Evita que o texto do link quebre em duas linhas */
 }
 
 nav a:hover {
@@ -50,8 +57,7 @@ nav a:hover {
 
 /* ====================== JORNADA HERO ====================== */
 .jornada-hero {
-    height: 100vh;
-    min-height: 750px;
+    min-height: 100vh; /* Mudado de height para min-height para evitar que o texto vaze */
     background: 
         linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
         url('imagens/hero-jornada.png');
@@ -62,7 +68,7 @@ nav a:hover {
     align-items: center;
     text-align: center;
     margin: 0;
-    padding-top: 220px;           /* Ajuste principal aqui */
+    padding: 120px 0 60px 0; /* Padding mais equilibrado para aceitar variação de tela */
 }
 
 /* ====================== CONTEÚDO DA HERO ====================== */
@@ -96,6 +102,46 @@ nav a:hover {
     font-weight: bold;
     font-size: 1.1rem;
     transition: 0.3s;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE EXCLUSIVA DESTE BLOCO (Celulares)
+   ========================================================================== */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+        height: auto; /* Permite o menu se adaptar melhor */
+        flex-direction: column; /* Joga os links para baixo da logo se a tela for muito pequena */
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    nav a {
+        margin-left: 15px; /* Diminui o espaço entre os links no celular */
+        font-size: 0.95rem;
+    }
+
+    .jornada-hero {
+        padding-top: 140px; /* Ajusta o recuo por causa do menu responsivo */
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem; /* Reduz o título para caber perfeitamente na tela do celular */
+    }
+
+    .hero-content p {
+        font-size: 1.1rem; /* Texto mais legível em telas menores */
+    }
+
+    .hero-button {
+        padding: 14px 30px;
+        font-size: 1rem;
+        width: 100%; /* O botão vira largura cheia no celular, facilitando o clique com o polegar */
+        max-width: 300px;
+    }
 }
 
 .hero-button:hover {
@@ -149,15 +195,19 @@ nav a:hover {
     border: 1px solid #333;
     padding: 28px 20px;
     border-radius: 12px;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
     text-align: center;
     text-decoration: none;
+    display: block; /* Garante comportamento correto como link em bloco */
 }
 
-.dia-card:hover {
-    transform: translateY(-8px);
-    border-color: #c59d5f;
-    box-shadow: 0 10px 25px rgba(197, 157, 95, 0.15);
+/* O efeito de flutuar e sombra agora só acontece em computadores (telas com ponteiro/mouse) */
+@media (hover: hover) {
+    .dia-card:hover {
+        transform: translateY(-8px);
+        border-color: #c59d5f;
+        box-shadow: 0 10px 25px rgba(197, 157, 95, 0.15);
+    }
 }
 
 .dia-card h3 {
@@ -166,15 +216,38 @@ nav a:hover {
     margin-bottom: 12px;
 }
 
-/* ====================== RESPONSIVIDADE ====================== */
+/* ==========================================================================
+   RESPONSIVIDADE EXCLUSIVA DESTE BLOCO (Celulares e Tablets)
+   ========================================================================== */
 @media (max-width: 768px) {
-    .jornada-hero {
-        padding-top: 170px;
-        height: 90vh;
+    .hero {
+        padding: 100px 20px 40px;
+        gap: 30px; /* Reduz o espaço entre elementos na estrutura flex */
     }
-    
-    .hero-content h2 {
-        font-size: 3.3rem;
+
+    .sobre {
+        padding: 60px 20px; /* Reduz o recuo excessivo no celular */
+    }
+
+    .sobre h2 {
+        font-size: 2rem; /* Reduz o título para caber harmoniosamente na tela do celular */
+        margin-bottom: 25px;
+    }
+
+    .jornada-intro {
+        margin: 40px auto;
+        font-size: 1.1rem; /* Ajusta a leitura do texto introdutório */
+    }
+
+    .dias-grid {
+        margin-bottom: 40px;
+        padding: 10px; /* Otimiza o espaço lateral interno do grid */
+    }
+
+    /* Feedback de clique mais suave para telas de toque */
+    .dia-card:active {
+        background: #161616;
+        border-color: #c59d5f;
     }
 }
 
@@ -206,36 +279,31 @@ nav a:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-.nav-link:hover::after {
-    opacity: 1;
-    visibility: visible;
-    margin-top: 12px;
+/* O balão descritivo só aparece no computador */
+@media (hover: hover) {
+    .nav-link:hover::after {
+        opacity: 1;
+        visibility: visible;
+        margin-top: 12px;
+    }
 }
 
 /* Ajuste para mobile */
 @media (max-width: 768px) {
     .nav-link::after {
-        display: none; /* desativa no celular para não atrapalhar */
+        display: none; /* Desativa totalmente no celular para não atrapalhar o toque */
     }
 }
 
 /* ====================== EFEITO MÁGICO - HERO JORNADA ====================== */
+/* 
+   NOTA: As propriedades estruturais de .jornada-hero (altura, fundos e paddings) 
+   estão protegidas e isoladas no Bloco 1 para evitar quebras de layout.
+*/
 .jornada-hero {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    height: 92vh;
-    min-height: 720px;
-    background: 
-        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
-        url('imagens/hero-jornada.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 220px;
 }
 
 .hover-phrase {
@@ -250,155 +318,146 @@ nav a:hover {
     letter-spacing: 2px;
 }
 
-.jornada-hero:hover .hover-phrase {
-    opacity: 1;
-    transform: translateY(0) scale(1);
+/* Os efeitos de animação e brilho agora ficam protegidos para telas com mouse */
+@media (hover: hover) {
+    .jornada-hero:hover .hover-phrase {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    .jornada-hero:hover h2 {
+        color: #f0d9a8;
+        text-shadow: 0 0 30px rgba(232, 199, 143, 0.8);
+    }
+
+    .jornada-hero:hover .hero-button {
+        transform: scale(1.08); /* Escala suavizada para evitar distorções */
+        box-shadow: 0 15px 30px rgba(197, 157, 95, 0.4);
+    }
 }
 
-/* Efeitos adicionais */
-.jornada-hero:hover h2 {
-    color: #f0d9a8;
-    text-shadow: 0 0 30px rgba(232, 199, 143, 0.8);
-}
-
-.jornada-hero:hover .hero-button {
-    transform: scale(1.12);
-    box-shadow: 0 20px 35px rgba(197, 157, 95, 0.5);
+/* ==========================================================================
+   RESPONSIVIDADE EXCLUSIVA DESTE BLOCO (Celulares)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* No celular, a frase mágica fica permanentemente visível, mas adaptada ao tamanho da tela */
+    .hover-phrase {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        font-size: 1.3rem; /* Tamanho proporcional para telas de smartphones */
+        margin: 15px 0 25px;
+        letter-spacing: 1px;
+    }
 }
 
 /* ===== FOOTER ===== */
-
 .site-footer {
-
   background: #0a0a0a;
-
   color: #ddd;
-
   margin-top: 80px;
-
   padding-top: 60px;
-
   border-top: 1px solid #222;
 }
 
 .footer-container {
-
   max-width: 1200px;
-
   margin: auto;
-
   display: grid;
-
-  grid-template-columns:
-  repeat(auto-fit, minmax(250px, 1fr));
-
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
-
   padding: 0 20px 50px;
 }
 
 .footer-column h3 {
-
   color: #c59d5f;
-
   margin-bottom: 20px;
-
   font-size: 1.3rem;
 }
 
 .footer-column p {
-
   line-height: 1.8;
-
   color: #bbb;
 }
 
 .footer-column a {
-
   display: block;
-
   color: #bbb;
-
   text-decoration: none;
-
   margin-bottom: 12px;
-
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
-.footer-column a:hover {
-
-  color: #c59d5f;
-
-  transform: translateX(5px);
+/* O efeito de mover o link para o lado só acontece em computadores com mouse */
+@media (hover: hover) {
+  .footer-column a:hover {
+    color: #c59d5f;
+    transform: translateX(5px);
+  }
 }
 
 .footer-bottom {
-
   border-top: 1px solid #222;
-
   text-align: center;
-
   padding: 30px 20px;
-
   color: #888;
 }
 
 .footer-bottom p {
-
   margin-bottom: 10px;
-
   color: #c59d5f;
-} 
+}
 
+/* ==========================================================================
+   RESPONSIVIDADE EXCLUSIVA DESTE BLOCO (Celulares e Tablets)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .site-footer {
+    margin-top: 40px; /* Reduz o espaçamento gigante acima do rodapé no mobile */
+    padding-top: 40px;
+  }
+
+  .footer-container {
+    gap: 30px; /* Reduz a distância entre uma coluna empilhada e outra */
+    padding: 0 20px 30px;
+  }
+
+  .footer-column h3 {
+    margin-bottom: 12px; /* Deixa o título mais próximo dos seus respectivos links */
+  }
+
+  /* Cria um clique visual mais agradável para o polegar no celular */
+  .footer-column a:active {
+    color: #c59d5f;
+  }
+}
 /* ===== PÁGINAS DOS DIAS ===== */
-
 .dia-page {
-
-  padding:
-  140px 20px 80px;
+  padding: 140px 20px 80px;
 }
 
 .dia-container {
-
   max-width: 900px;
-
   margin: auto;
-
   background: #111;
-
   border: 1px solid #222;
-
   border-radius: 20px;
-
   padding: 50px 40px;
-
   color: #eee;
 }
 
 .dia-numero {
-
   display: inline-block;
-
   background: #c59d5f;
-
   color: #111;
-
   padding: 8px 18px;
-
   border-radius: 30px;
-
   font-weight: bold;
-
   margin-bottom: 20px;
 }
 
 .dia-container h1 {
-
   font-size: 3rem;
-
   margin-bottom: 40px;
-
   color: #c59d5f;
 }
 
@@ -406,7 +465,6 @@ nav a:hover {
 .reflexao,
 .pratica,
 .oracao {
-
   margin-bottom: 40px;
 }
 
@@ -414,9 +472,7 @@ nav a:hover {
 .reflexao h2,
 .pratica h2,
 .oracao h2 {
-
   color: #c59d5f;
-
   margin-bottom: 15px;
 }
 
@@ -424,81 +480,112 @@ nav a:hover {
 .reflexao p,
 .pratica p,
 .oracao p {
-
   line-height: 1.9;
-
   color: #ddd;
-
   font-size: 1.1rem;
 }
 
 .versiculo span {
-
   display: block;
-
   margin-top: 15px;
-
   color: #999;
-
   font-style: italic;
 }
 
 .navegacao-dia {
-
   display: flex;
-
   justify-content: space-between;
-
   gap: 20px;
-
   margin-top: 50px;
 }
 
 .botao-principal,
 .botao-secundario {
-
   padding: 15px 30px;
-
   border-radius: 10px;
-
   text-decoration: none;
-
   font-weight: bold;
-
-  transition: 0.3s;
+  transition: 0.3s ease;
+  text-align: center; /* Garante centralização do texto interno do botão */
 }
 
 .botao-principal {
-
   background: #c59d5f;
-
   color: #111;
 }
 
-.botao-principal:hover {
-
-  transform: scale(1.05);
+/* O efeito de zoom no botão fica isolado para computadores */
+@media (hover: hover) {
+  .botao-principal:hover {
+    transform: scale(1.05);
+  }
 }
 
 .botao-secundario {
-
   border: 1px solid #444;
-
   color: #ddd;
 }
 
-.botao-secundario:hover {
-
-  border-color: #c59d5f;
-
-  color: #c59d5f;
+@media (hover: hover) {
+  .botao-secundario:hover {
+    border-color: #c59d5f;
+    color: #c59d5f;
+  }
 }
 
+/* ==========================================================================
+   RESPONSIVIDADE EXCLUSIVA DESTE BLOCO (Celulares)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .dia-page {
+    padding: 100px 10px 40px 10px; /* Reduz a folga superior no celular */
+  }
+
+  .dia-container {
+    padding: 30px 18px; /* Libera muito mais espaço horizontal para o texto respirar */
+    border-radius: 12px; /* Cantos arredondados mais sutis em telas menores */
+  }
+
+  .dia-container h1 {
+    font-size: 1.9rem; /* Tamanho confortável para títulos de estudos no mobile */
+    margin-bottom: 25px;
+  }
+
+  .versiculo, .reflexao, .pratica, .oracao {
+    margin-bottom: 30px; /* Reduz sutilmente o vão entre os blocos de leitura */
+  }
+
+  .versiculo p, .reflexao p, .pratica p, .oracao p {
+    font-size: 1.05rem; /* Tamanho ideal de leitura para telas de smartphones */
+    line-height: 1.8;
+  }
+
+  .navegacao-dia {
+    flex-direction: column-reverse; /* Empilha os botões (Avançar fica em cima por relevância) */
+    gap: 12px;
+    margin-top: 35px;
+  }
+
+  .botao-principal,
+  .botao-secundario {
+    width: 100%; /* Botões ocupam toda a largura, facilitando o clique com o polegar */
+    padding: 14px;
+  }
+  
+  /* Feedback tátil rápido para o celular */
+  .botao-principal:active {
+    background: #d4af7a;
+  }
+  
+  .botao-secundario:active {
+    border-color: #c59d5f;
+    color: #c59d5f;
+  }
+}
 
 /* =================================
    ESTUDOS BÍBLICOS
 ================================= */
-
 .estudos-page {
     padding: 140px 10% 80px;
 }
@@ -535,17 +622,25 @@ nav a:hover {
     gap: 25px;
 }
 
+/* REGRA UNIFICADA: Juntamos os estilos do card em um único bloco */
 .estudo-card {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(212,175,55,0.15);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.15);
     border-radius: 16px;
     padding: 30px;
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Garante que o link se comporte perfeitamente como um bloco inteiro */
     transition: all 0.3s ease;
 }
 
-.estudo-card:hover {
-    transform: translateY(-8px);
-    border-color: #d4af37;
+/* O efeito de subir o card fica isolado para computadores */
+@media (hover: hover) {
+    .estudo-card:hover {
+        transform: translateY(-8px);
+        border-color: #d4af37;
+        background: rgba(255, 255, 255, 0.08); /* Sutil ganho de brilho no fundo */
+    }
 }
 
 .estudo-card h3 {
@@ -560,7 +655,6 @@ nav a:hover {
 /* =================================
    SEÇÕES DE ESTUDOS
 ================================= */
-
 .secao-estudos,
 .vida-em-foco {
     margin-bottom: 90px;
@@ -576,7 +670,7 @@ nav a:hover {
 
 .vida-em-foco {
     padding-top: 60px;
-    border-top: 1px solid rgba(212,175,55,0.2);
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .vida-em-foco > p {
@@ -587,16 +681,58 @@ nav a:hover {
     opacity: 0.9;
 }
 
-.estudo-card {
-    text-decoration: none;
-    color: inherit;
-}
+/* ==========================================================================
+   RESPONSIVIDADE EXCLUSIVA DESTE BLOCO (Celulares e Tablets)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .estudos-page {
+        padding: 100px 16px 40px 16px; /* Substitui os 10% fixos por uma margem confortável e segura */
+    }
 
+    .hero-estudos {
+        margin-bottom: 40px;
+    }
+
+    .hero-estudos h1 {
+        font-size: 2.1rem; /* Reduz o tamanho do título para não quebrar feio no mobile */
+        margin-bottom: 12px;
+    }
+
+    .hero-estudos p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+
+    .estudos-grid {
+        gap: 16px; /* Deixa os blocos um pouco mais próximos e compactos */
+    }
+
+    .estudo-card {
+        padding: 20px; /* Reduz o espaçamento interno interno do card para ganhar tela */
+    }
+
+    .secao-estudos, .vida-em-foco {
+        margin-bottom: 50px; /* Diminui os grandes vazios verticais */
+    }
+
+    .secao-estudos h2, .vida-em-foco h2 {
+        font-size: 1.6rem;
+    }
+
+    .vida-em-foco {
+        padding-top: 40px;
+    }
+
+    /* Resposta imediata e suave ao toque no celular */
+    .estudo-card:active {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: #d4af37;
+    }
+}
 
 /* =================================
    QUEM SOMOS
 ================================= */
-
 .quem-somos-page {
     max-width: 1000px;
     margin: 0 auto;
@@ -638,9 +774,12 @@ nav a:hover {
     transition: all 0.3s ease;
 }
 
-.quem-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(212, 175, 55, 0.5);
+/* Efeito de elevação do card protegido para computadores */
+@media (hover: hover) {
+    .quem-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(212, 175, 55, 0.5);
+    }
 }
 
 .quem-card h2 {
@@ -675,25 +814,7 @@ nav a:hover {
     opacity: 0.9;
 }
 
-@media (max-width: 768px) {
-
-    .quem-somos-page {
-        padding: 120px 20px 60px;
-    }
-
-    .hero-quem-somos h1 {
-        font-size: 2.2rem;
-    }
-
-    .quem-card {
-        padding: 25px;
-    }
-
-}
-
-
 /* REDES SOCIAIS */
-
 .social-links {
     display: flex;
     flex-wrap: wrap;
@@ -705,47 +826,70 @@ nav a:hover {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     min-width: 180px;
-
     padding: 14px 24px;
-
     background: rgba(212, 175, 55, 0.10);
-
     border: 1px solid #d4af37;
-
     border-radius: 12px;
-
     color: #d4af37;
-
     text-decoration: none;
-
     font-weight: 600;
-
     transition: all 0.3s ease;
 }
 
-.social-btn:hover {
-    background: #d4af37;
-    color: #111;
-    transform: translateY(-3px);
+/* Efeitos de hover nos botões sociais isolados para computadores com mouse */
+@media (hover: hover) {
+    .social-btn:hover {
+        background: #d4af37;
+        color: #111;
+        transform: translateY(-3px);
+    }
 }
 
+/* ==========================================================================
+   RESPONSIVIDADE EXCLUSIVA DESTE BLOCO (Celulares e Tablets)
+   ========================================================================== */
 @media (max-width: 768px) {
+    .quem-somos-page {
+        padding: 100px 16px 40px 16px; /* Ajuste milimétrico de recuo de tela */
+    }
+
+    .hero-quem-somos h1 {
+        font-size: 2.1rem; /* Padronizado com as outras páginas internas do site */
+    }
+
+    .hero-quem-somos p {
+        font-size: 1.05rem;
+    }
+
+    .quem-card {
+        padding: 22px 16px; /* Dá mais espaço de leitura para depoimentos e textos */
+        border-radius: 12px;
+    }
+
+    .quem-card blockquote {
+        margin: 18px 0;
+        padding-left: 12px; /* Reduz sutilmente o vão para otimizar displays menores */
+    }
 
     .social-links {
         flex-direction: column;
+        gap: 12px;
     }
 
     .social-btn {
-        width: 100%;
+        width: 100%; /* Botões preenchem a largura total do celular, facilitando o toque */
+    }
+
+    /* Resposta de clique instantânea e sem tremores para celulares */
+    .social-btn:active {
+        background: #d4af37;
+        color: #111;
     }
 }
-
 /* =================================
    PÁGINAS DE CATEGORIA
 ================================= */
-
 .categoria-page {
     padding: 140px 10% 80px;
     max-width: 1200px;
@@ -753,7 +897,6 @@ nav a:hover {
 }
 
 /* Hero */
-
 .hero-categoria {
     text-align: center;
     margin-bottom: 80px;
@@ -783,7 +926,6 @@ nav a:hover {
 }
 
 /* Introdução */
-
 .introducao-categoria {
     background: rgba(255,255,255,0.03);
     border: 1px solid rgba(212,175,55,0.15);
@@ -812,7 +954,6 @@ nav a:hover {
 }
 
 /* Próximo estudo */
-
 .conteudos-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -824,21 +965,20 @@ nav a:hover {
     display: block;
     text-decoration: none;
     color: inherit;
-
     background: rgba(255,255,255,0.03);
-
     border: 1px solid rgba(212,175,55,0.15);
-
     border-radius: 20px;
-
     padding: 35px;
-
     transition: all .3s ease;
 }
 
-.conteudo-card:hover {
-    transform: translateY(-5px);
-    border-color: #d4af37;
+/* O efeito de hover fica isolado apenas para computadores com mouse */
+@media (hover: hover) {
+    .conteudo-card:hover {
+        transform: translateY(-5px);
+        border-color: #d4af37;
+        background: rgba(255, 255, 255, 0.05);
+    }
 }
 
 .conteudo-card h3 {
@@ -851,24 +991,63 @@ nav a:hover {
     line-height: 1.8;
 }
 
-/* Responsivo */
-
+/* ==========================================================================
+   RESPONSIVIDADE EXCLUSIVA DESTE BLOCO (Celulares e Tablets)
+   ========================================================================== */
 @media (max-width: 768px) {
+    .categoria-page {
+        padding: 100px 16px 40px 16px; /* Remove os 10% fixos laterais prejudiciais no mobile */
+    }
+
+    .hero-categoria {
+        margin-bottom: 40px;
+    }
 
     .hero-categoria h1 {
-        font-size: 2.4rem;
+        font-size: 2.1rem; /* Alinhado com o tamanho padrão mobile do site */
+        margin-bottom: 15px;
+    }
+
+    .hero-categoria p {
+        font-size: 1.05rem;
     }
 
     .introducao-categoria {
-        padding: 30px;
+        padding: 25px 16px; /* Otimiza o espaço interno para telas pequenas */
+        margin-bottom: 40px;
+        border-radius: 12px;
     }
 
-}
+    .introducao-categoria h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
 
+    .introducao-categoria h3 {
+        font-size: 1.3rem;
+        margin: 30px 0 15px;
+    }
+
+    .introducao-categoria p {
+        text-align: left; /* CORREÇÃO: Evita espaçamentos esquisitos e feios entre palavras no celular */
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+
+    .conteudo-card {
+        padding: 22px 16px; /* Ajusta o card para encaixar bem na tela do telefone */
+        border-radius: 12px;
+    }
+
+    /* Feedback tátil limpo e direto para aparelhos mobile */
+    .conteudo-card:active {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: #d4af37;
+    }
+}
 /* ======================================
    PRÓXIMO ESTUDO
 ====================================== */
-
 .proximo-estudo {
     max-width: 1000px;
     margin: 40px auto;
@@ -900,13 +1079,17 @@ nav a:hover {
     transition: 0.3s ease;
 }
 
-.btn-proximo:hover {
-    transform: translateY(-2px);
+/* O efeito hover do botão de próximo estudo fica isolado para PCs */
+@media (hover: hover) {
+    .btn-proximo:hover {
+        transform: translateY(-2px);
+        background: #e5bf47;
+    }
 }
+
 /* ================================
    PADRÃO DE TÍTULOS DOS ESTUDOS
 ================================ */
-
 .categoria-page h2 {
     color: #d4af37;
 }
@@ -923,7 +1106,6 @@ nav a:hover {
 /* ======================================
    INTRODUÇÃO - ESTILO COMPLETO DO CARD
 ====================================== */
-
 .introducao-categoria {
     max-width: 1000px;
     margin: 40px auto;
@@ -931,43 +1113,66 @@ nav a:hover {
     background: #1a1a1a;
     border-left: 5px solid #d4af37;
     border-radius: 8px;
-
-    /* 🔥 ESSENCIAL: animação igual aos outros cards */
     transition: all 0.3s ease;
 }
 
-/* 🔥 EFEITO DE MOVIMENTO (hover igual padrão do site) */
-.introducao-categoria:hover {
-    transform: translateY(-5px);
+/* O efeito hover do card de introdução fica isolado para PCs */
+@media (hover: hover) {
+    .introducao-categoria:hover {
+        transform: translateY(-5px);
+    }
 }
 
-/* 🔥 TÍTULOS DENTRO DO CARD */
+/* REGRA UNIFICADA: Títulos dentro do card */
 .introducao-categoria h2 {
     color: #d4af37;
-    margin-top: 20px;
-    margin-bottom: 15px;
+    margin-top: 35px;
+    margin-bottom: 20px;
 }
 
-/* 🔥 PARÁGRAFOS */
+.introducao-categoria h2:first-of-type {
+    margin-top: 20px; /* Mantém o primeiro título alinhado corretamente */
+}
+
+/* REGRA UNIFICADA: Parágrafos */
 .introducao-categoria p {
-    line-height: 1.8;
-    margin-bottom: 15px;
+    line-height: 1.9;
+    margin-bottom: 18px;
 }
 
-/* 🔥 BLOCKQUOTE */
+/* REGRA UNIFICADA: Bloco de Citações / Versículos */
 .introducao-categoria blockquote {
-    background: #111;
+    background: rgba(212, 175, 55, 0.08);
     border-left: 4px solid #d4af37;
     padding: 20px;
-    margin: 20px 0;
+    margin: 25px 0;
     font-style: italic;
     color: #f1f1f1;
+    border-radius: 8px;
+}
+
+.introducao-categoria cite {
+    display: block;
+    margin-top: 10px;
+    color: #d4af37;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.introducao-categoria ul {
+    max-width: 900px;
+    margin: 20px auto;
+    padding-left: 25px;
+}
+
+.introducao-categoria li {
+    margin-bottom: 10px;
+    line-height: 1.8;
 }
 
 /* ==========================
    MEDITAÇÕES
 ========================== */
-
 .meditacao-conteudo {
     max-width: 850px;
     margin: 50px auto;
@@ -996,70 +1201,73 @@ nav a:hover {
 }
 
 /* =====================================
-   APOLOGÉTICA CRISTÃ
+   MÍDIA / VÍDEOS RESPONSIVOS
 ===================================== */
-
-.introducao-categoria ul {
-    max-width: 900px;
-    margin: 20px auto;
-    padding-left: 25px;
-}
-
-.introducao-categoria li {
-    margin-bottom: 10px;
-    line-height: 1.8;
-}
-
-.introducao-categoria blockquote {
-    border-left: 4px solid #d4af37;
-    background: rgba(212, 175, 55, 0.08);
-    padding: 20px;
-    margin: 30px 0;
-    border-radius: 8px;
-    font-style: italic;
-}
-
-.introducao-categoria cite {
-    display: block;
-    margin-top: 10px;
-    color: #d4af37;
-    font-style: normal;
-    font-weight: bold;
-}
-
-.introducao-categoria h2 {
-    color: #d4af37;
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
-
-.introducao-categoria p {
-    line-height: 1.9;
-    margin-bottom: 18px;
-}
-
 .video-container {
-position: relative;
-width: 100%;
-max-width: 900px;
-margin: 30px auto;
-padding-top: 56.25%;
-overflow: hidden;
-border-radius: 12px;
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding-top: 56.25%; /* Mantém proporção 16:9 perfeita em qualquer tela */
+    overflow: hidden;
+    border-radius: 12px;
 }
 
 .video-container iframe {
-position: absolute;
-inset: 0;
-width: 100%;
-height: 100%;
-border: none;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE EXCLUSIVA DESTE BLOCO (Celulares)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .proximo-estudo,
+    .introducao-categoria {
+        padding: 22px 16px; /* Otimiza espaço em telas de celulares */
+        margin: 25px auto;
+        border-radius: 6px;
+    }
+
+    .introducao-categoria h2 {
+        font-size: 1.6rem;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+
+    .meditacao-conteudo {
+        margin: 30px auto;
+        padding: 22px 16px; /* Evita o esmagamento lateral das meditações no mobile */
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+
+    .meditacao-conteudo blockquote {
+        margin: 1.5rem 0;
+        padding: 1rem;
+    }
+
+    .introducao-categoria ul {
+        padding-left: 18px; /* Reduz recuo de listas no mobile */
+    }
+
+    .video-container {
+        margin: 20px auto;
+        border-radius: 8px; /* Bordas ligeiramente menores para telas menores */
+    }
+
+    /* Feedback tátil rápido para o mobile */
+    .btn-proximo:active {
+        background: #e5bf47;
+    }
 }
 
 /* ==========================================================================
    FORMULÁRIO COMPARTILHADO (Testemunhos e Oração)
    ========================================================================== */
-
 .form-testemunho {
     display: flex;
     flex-direction: column;
@@ -1079,19 +1287,19 @@ border: none;
     border-radius: 8px;
     background-color: #1a1a1a;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 16px; /* Essencial: evita zoom forçado em navegadores iOS */
     font-family: inherit;
     box-sizing: border-box;
     outline: none;
     transition: all 0.3s ease;
 }
 
-/* Efeito de foco atualizado para incluir o campo de email */
+/* Efeito de foco atualizado com a paleta dourada padrão do site */
 .form-testemunho input[type="text"]:focus,
 .form-testemunho input[type="email"]:focus,
 .form-testemunho textarea:focus {
-    border-color: #ffcc00;
-    box-shadow: 0 0 8px rgba(255, 204, 0, 0.2);
+    border-color: #c59d5f;
+    box-shadow: 0 0 8px rgba(197, 157, 95, 0.3);
 }
 
 .form-testemunho textarea {
@@ -1100,7 +1308,7 @@ border: none;
 }
 
 .form-testemunho button {
-    background-color: #ffcc00;
+    background-color: #c59d5f; /* Corrigido para o dourado oficial do site */
     color: #111111;
     font-weight: bold;
     font-size: 16px;
@@ -1113,22 +1321,158 @@ border: none;
     margin-top: 5px;
 }
 
-.form-testemunho button:hover {
-    background-color: #e6b800;
+/* O efeito hover do botão fica isolado para computadores */
+@media (hover: hover) {
+    .form-testemunho button:hover {
+        background-color: #b38c4f; /* Tom dourado ligeiramente mais escuro */
+    }
 }
 
 .form-testemunho button:active {
     transform: scale(0.98);
 }
 
-
-/* Correção do espaçamento para o Header não cobrir o título */
-.oracao-page {
-    padding-top: 100px; /* Cria um espaço no topo equivalente à altura do seu header */
+/* 
+   CORREÇÃO DE HEADER: Aplicado o recuo de segurança para ambas as páginas 
+   para evitar que o menu fixo cubra os títulos principais.
+*/
+.oracao-page,
+.testemunhos-page {
+    padding: 140px 20px 80px; /* Alinhado perfeitamente com o padrão das outras páginas internas */
 }
 
+/* ==========================================================================
+   RESPONSIVIDADE EXCLUSIVA DESTE BLOCO (Celulares)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .oracao-page,
+    .testemunhos-page {
+        padding: 100px 16px 40px 16px; /* Recuo menor e otimizado para telas mobile */
+    }
 
+    .form-testemunho {
+        margin-top: 20px;
+        gap: 12px; /* Diminui sutilmente o espaço entre os campos no celular */
+    }
 
+    .form-testemunho input[type="text"],
+    .form-testemunho input[type="email"],
+    .form-testemunho textarea {
+        padding: 12px 14px; /* Campos ligeiramente mais compactos para displays menores */
+        font-size: 16px; /* Mantido estritamente em 16px para segurança contra zoom */
+    }
+
+    .form-testemunho button {
+        padding: 14px;
+        width: 100%; /* Botão em largura cheia para facilitar o clique com o polegar */
+    }
+    
+    /* Resposta imediata ao toque no celular */
+    .form-testemunho button:active {
+        background-color: #b38c4f;
+    }
+}
+
+/* ==========================================================================
+   AJUSTE DE CORREÇÃO SINALIZADO PELO INSPETOR (Correção da Home)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Impede o body de aceitar qualquer transbordamento lateral */
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /* Ajusta o container Flex da Home para não estourar a tela */
+    .hero {
+        padding: 100px 16px 40px 16px;
+        gap: 20px; /* Diminui o vão entre a imagem/texto na Home */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* CORREÇÃO DO TITULO DA HOME: Reduz o tamanho da fonte para caber no celular */
+    .hero h1, 
+    .hero h2 {
+        font-size: 2.2rem !important; /* Força a redução do texto gigante que causou o bug */
+        line-height: 1.2;
+        max-width: 100%;
+        word-wrap: break-word; /* Se houver uma palavra muito grande, ela quebra com segurança */
+    }
+
+    /* Caso tenha alguma imagem ou caixa de texto dentro da hero da Home, garante que não passem do limite */
+    .hero > div,
+    .hero img {
+        max-width: 100% !important;
+        height: auto;
+    }
+}
+
+/* ==========================================================================
+   CORREÇÃO VISUAL E DE CLIQUE - BOTÕES DA HOME
+   ========================================================================== */
+.hero .botoes {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    justify-content: center; /* Centraliza os botões na Home */
+    flex-wrap: wrap;
+}
+
+.hero .botoes a {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* O primeiro botão (Baixar E-book) ganha o destaque dourado principal */
+.hero .botoes a:first-child {
+    background: #c59d5f;
+    color: #111111 !important; /* Força o texto a ficar escuro e legível */
+}
+
+/* O segundo botão (Começar Jornada) ganha o estilo secundário vazado */
+.hero .botoes a:last-child {
+    border: 1px solid #444;
+    color: #dddddd !important;
+    background: transparent;
+}
+
+/* Efeitos de Hover exclusivos para computador */
+@media (hover: hover) {
+    .hero .botoes a:first-child:hover {
+        background: #d4af7a;
+        transform: translateY(-2px);
+    }
+    
+    .hero .botoes a:last-child:hover {
+        border-color: #c59d5f;
+        color: #c59d5f !important;
+    }
+}
+
+/* Ajuste Responsivo para Celulares */
+@media (max-width: 768px) {
+    .hero .botoes {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .hero .botoes a {
+        width: 100%; /* Botões em largura cheia para facilitar o toque com o polegar */
+        padding: 14px;
+    }
+
+    .hero .botoes a:active {
+        opacity: 0.9;
+    }
+}
 
 
 
