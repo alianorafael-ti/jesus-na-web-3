@@ -55,3 +55,4 @@ function corrigirLinksMenu(container, isGitHubPages, repoName) {
         }
     });
 }
+

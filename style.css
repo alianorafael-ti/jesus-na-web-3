@@ -1056,6 +1056,76 @@ height: 100%;
 border: none;
 }
 
+/* ==========================================================================
+   FORMULÁRIO COMPARTILHADO (Testemunhos e Oração)
+   ========================================================================== */
+
+.form-testemunho {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 550px;
+    margin: 30px auto 0 auto;
+    text-align: left; /* Garante que os textos e placeholders fiquem alinhados à esquerda */
+}
+
+/* Incluído o tipo email para padronizar as duas páginas */
+.form-testemunho input[type="text"],
+.form-testemunho input[type="email"],
+.form-testemunho textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: inherit;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Efeito de foco atualizado para incluir o campo de email */
+.form-testemunho input[type="text"]:focus,
+.form-testemunho input[type="email"]:focus,
+.form-testemunho textarea:focus {
+    border-color: #ffcc00;
+    box-shadow: 0 0 8px rgba(255, 204, 0, 0.2);
+}
+
+.form-testemunho textarea {
+    height: 140px;
+    resize: vertical;
+}
+
+.form-testemunho button {
+    background-color: #ffcc00;
+    color: #111111;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-top: 5px;
+}
+
+.form-testemunho button:hover {
+    background-color: #e6b800;
+}
+
+.form-testemunho button:active {
+    transform: scale(0.98);
+}
+
+
+/* Correção do espaçamento para o Header não cobrir o título */
+.oracao-page {
+    padding-top: 100px; /* Cria um espaço no topo equivalente à altura do seu header */
+}
 
 
 
