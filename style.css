@@ -1474,6 +1474,75 @@ nav a:hover {
     }
 }
 
+/* ==========================================================================
+   BOTÃO DE COMPARTILHAR (ESTUDOS E INTRODUÇÕES)
+   ========================================================================== */
+
+.share-container {
+    text-align: center;
+    margin: 40px auto;
+    padding: 24px 15px;
+    max-width: 600px; /* Alinha com a largura de leitura dos estudos */
+    border-top: 1px dashed rgba(0, 0, 0, 0.15); /* Linha divisória sutil */
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+}
+
+.share-title {
+    font-size: 1rem;
+    color: #555555;
+    margin-bottom: 16px;
+    font-style: italic;
+    font-family: inherit;
+}
+
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #25D366; /* Verde característico de ação/compartilhamento */
+    color: #ffffff;
+    padding: 14px 32px;
+    border-radius: 30px; /* Formato arredondado e anatômico para clique no celular */
+    font-weight: 600;
+    font-size: 1.05rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+    width: auto; /* Garante que ele não estique desnecessariamente em telas grandes */
+    -webkit-tap-highlight-color: transparent; /* Remove o flash cinza ao tocar no mobile */
+}
+
+/* Efeito ao passar o mouse (Computador) */
+@media (hover: hover) {
+    .share-btn:hover {
+        background-color: #128C7E;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(18, 140, 126, 0.3);
+    }
+}
+
+/* Efeito ao tocar (Celular/Touch) */
+.share-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 6px rgba(18, 140, 126, 0.2);
+}
+
+.share-icon {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* Responsividade para telas muito pequenas (Celulares antigos) */
+@media (max-width: 360px) {
+    .share-btn {
+        width: 100%; /* O botão ocupa a largura disponível para facilitar o toque */
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+}
+
 
 
 

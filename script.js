@@ -56,3 +56,22 @@ function corrigirLinksMenu(container, isGitHubPages, repoName) {
     });
 }
 
+// Seleciona todos os botões de compartilhar da página (seja na introdução ou no fim)
+const botoesCompartilhar = document.querySelectorAll('.share-btn');
+
+botoesCompartilhar.forEach(botao => {
+    botao.addEventListener('click', () => {
+        if (navigator.share) {
+            navigator.share({
+                title: document.title, // Pega o título da página automaticamente
+                text: 'Confira este conteúdo edificante no Jesus na Web!',
+                url: window.location.href // Pega o link da página atual automaticamente
+            })
+            .catch((error) => console.log('Erro ao compartilhar', error));
+        } else {
+            navigator.clipboard.writeText(window.location.href);
+            alert('Link copiado para a área de transferência!');
+        }
+    });
+});
+
