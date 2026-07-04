@@ -3,7 +3,7 @@
 
   <!-- Página Principal -->
   <url>
-    <loc>https://jesus-na-web.vercel.app/</loc>
+    <loc>https://jesusnaweb.aliano.com.br/</loc>
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,7 +11,7 @@
 
   <!-- Jornada -->
   <url>
-    <loc>https://jesus-na-web.vercel.app/jornada.html</loc>
+    <loc>https://jesusnaweb.aliano.com.br/jornada.html</loc>
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -19,7 +19,7 @@
 
   <!-- Estudos -->
   <url>
-    <loc>https://jesus-na-web.vercel.app/estudos.html</loc>
+    <loc>https://jesusnaweb.aliano.com.br/estudos.html</loc>
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -27,7 +27,7 @@
 
   <!-- Quem Somos -->
   <url>
-    <loc>https://jesus-na-web.vercel.app/quem-somos.html</loc>
+    <loc>https://jesusnaweb.aliano.com.br/quem-somos.html</loc>
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -35,7 +35,7 @@
 
   <!-- Testemunhos -->
   <url>
-    <loc>https://jesus-na-web.vercel.app/testemunhos.html</loc>
+    <loc>https://jesusnaweb.aliano.com.br/testemunhos.html</loc>
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -43,9 +43,24 @@
 
   <!-- Oração -->
   <url>
-    <loc>https://jesus-na-web.vercel.app/oracao.html</loc>
+    <loc>https://jesusnaweb.aliano.com.br/oracao.html</loc>
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Segmento Louvor e Adoração -->
+  <url>
+    <loc>https://jesusnaweb.aliano.com.br/louvor-e-adoracao/</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Estudo: Os Levitas -->
+  <url>
+    <loc>https://jesusnaweb.aliano.com.br/louvor-e-adoracao/os-levitas.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
