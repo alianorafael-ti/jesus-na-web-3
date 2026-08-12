@@ -337,11 +337,11 @@
         <priority>0.70</priority>
     </url>
     <url>
-        <loc>https://jesusnaweb.aliano.com.br/estudos/disciplinas-espirituais/o-poder-da-leitura-biblica.html</loc>
-        <lastmod>2026-06-06</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.70</priority>
-    </url>
+    <loc>https://jesusnaweb.aliano.com.br/estudos/disciplinas-espirituais/o-poder-da-leitura-biblica.html</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+</url>
     <url>
         <loc>https://jesusnaweb.aliano.com.br/estudos/disciplinas-espirituais/perseverando-na-fe.html</loc>
         <lastmod>2026-06-06</lastmod>
@@ -383,6 +383,12 @@
     <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>  
+</url>
+ <url>
+    <loc>https://jesusnaweb.aliano.com.br/estudos/estudos-biblicos/a-biblia-e-a-imortalidade-da-alma.html</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
 </url>
            
     
